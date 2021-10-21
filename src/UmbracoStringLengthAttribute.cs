@@ -21,6 +21,10 @@ namespace Our.Umbraco.DataAnnotations
             AttributeHelper.MergeAttribute(context.Attributes, "data-val", "true");
             AttributeHelper.MergeAttribute(context.Attributes, "data-val-length", ErrorMessage);
             AttributeHelper.MergeAttribute(context.Attributes, "data-val-length-max", MaximumLength.ToString());
+            if (MinimumLength > 0)
+            {
+                AttributeHelper.MergeAttribute(context.Attributes, "data-val-length-min", MinimumLength.ToString());
+            }
         }
     }
 }
