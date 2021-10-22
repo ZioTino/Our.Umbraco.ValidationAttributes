@@ -7,14 +7,11 @@ This project is a port for Umbraco 9, taken from the [original Our.Umbraco.DataA
 [Looking for Umbraco 8?](https://github.com/rasmuseeg/Our.Umbraco.DataAnnotations/tree/dev-v8)  
 [Looking for Umbraco 7?](https://github.com/rasmuseeg/Our.Umbraco.DataAnnotations/tree/dev-v7)
 
-<!-- ## Installation
-
-NuGet:
+## Installation
 ```
-PM > Install-Package Our.Umbraco.ValidationAttributes
+dotnet add package Our.Umbraco.ValidationAttributes
 ```
-
-Build the project and start website. -->
+Build the project and start website.
 
 ## Client Validation
 Include the following scripts in your layout.cshtml file, or in your master page:
