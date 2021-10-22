@@ -1,11 +1,11 @@
-using Our.Umbraco.DataAnnotations.Helpers;
-using Our.Umbraco.DataAnnotations.Interfaces;
-using Our.Umbraco.DataAnnotations.Services;
+using Our.Umbraco.ValidationAttributes.Helpers;
+using Our.Umbraco.ValidationAttributes.Interfaces;
+using Our.Umbraco.ValidationAttributes.Services;
 using System;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Our.Umbraco.DataAnnotations
+namespace Our.Umbraco.ValidationAttributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public sealed class UmbracoMustBeTrueAttribute : ValidationAttribute, IClientModelValidator, IUmbracoValidationAttribute
@@ -16,7 +16,7 @@ namespace Our.Umbraco.DataAnnotations
 
         public void AddValidation(ClientModelValidationContext context)
         {
-            ErrorMessage = DataAnnotationsService.DictionaryValue(DictionaryKey);
+            ErrorMessage = ValidationAttributesService.DictionaryValue(DictionaryKey);
             AttributeHelper.MergeAttribute(context.Attributes, "data-val-mustbetrue", ErrorMessage);
         }
 

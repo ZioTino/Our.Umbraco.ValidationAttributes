@@ -1,8 +1,8 @@
-using Our.Umbraco.DataAnnotations.Interfaces;
-using Our.Umbraco.DataAnnotations.Services;
+using Our.Umbraco.ValidationAttributes.Interfaces;
+using Our.Umbraco.ValidationAttributes.Services;
 using System.ComponentModel;
 
-namespace Our.Umbraco.DataAnnotations
+namespace Our.Umbraco.ValidationAttributes
 {
     public sealed class UmbracoDisplayNameAttribute : DisplayNameAttribute, IUmbracoValidationAttribute
     {
@@ -13,6 +13,6 @@ namespace Our.Umbraco.DataAnnotations
             DictionaryKey = dictionaryKey;
         }
 
-        public override string DisplayName => DataAnnotationsService.DictionaryValue(DictionaryKey);
+        public override string DisplayName => ValidationAttributesService.DictionaryValue(DictionaryKey);
     }
 }

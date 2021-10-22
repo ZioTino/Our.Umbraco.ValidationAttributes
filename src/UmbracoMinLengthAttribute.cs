@@ -1,10 +1,10 @@
-using Our.Umbraco.DataAnnotations.Helpers;
-using Our.Umbraco.DataAnnotations.Interfaces;
-using Our.Umbraco.DataAnnotations.Services;
+using Our.Umbraco.ValidationAttributes.Helpers;
+using Our.Umbraco.ValidationAttributes.Interfaces;
+using Our.Umbraco.ValidationAttributes.Services;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Our.Umbraco.DataAnnotations
+namespace Our.Umbraco.ValidationAttributes
 {
     /// <summary>
     /// Specifies the minimum length of array or string data allowed in a property.
@@ -22,7 +22,7 @@ namespace Our.Umbraco.DataAnnotations
 
         public void AddValidation(ClientModelValidationContext context)
         {
-            ErrorMessage = DataAnnotationsService.DictionaryValue(DictionaryKey);
+            ErrorMessage = ValidationAttributesService.DictionaryValue(DictionaryKey);
             AttributeHelper.MergeAttribute(context.Attributes, "data-val", "true");
             AttributeHelper.MergeAttribute(context.Attributes, "data-val-minlength", ErrorMessage);
             AttributeHelper.MergeAttribute(context.Attributes, "data-val-minlength-min", Length.ToString());

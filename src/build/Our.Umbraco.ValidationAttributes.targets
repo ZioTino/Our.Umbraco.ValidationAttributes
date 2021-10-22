@@ -1,0 +1,27 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <OurUmbracoValidationAttributesContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Our.Umbraco.ValidationAttributes\**\*.*</OurUmbracoValidationAttributesContentFilesPath>
+    </PropertyGroup>
+
+    <Target Name="CopyOurUmbracoValidationAttributesAssets" BeforeTargets="Build">
+        <ItemGroup>
+            <OurUmbracoValidationAttributesContentFiles Include="$(OurUmbracoValidationAttributesContentFilesPath)" />
+        </ItemGroup>
+        <Message Text="Copying Our.Umbraco.ValidationAttributes files: $(OurUmbracoValidationAttributesContentFilesPath) - #@(OurUmbracoValidationAttributesContentFiles->Count()) files"  Importance="high" />
+        <Copy
+            SourceFiles="@(OurUmbracoValidationAttributesContentFiles)"
+            DestinationFiles="@(OurUmbracoValidationAttributesContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.ValidationAttributes\%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+
+    </Target>
+
+    <Target Name="ClearOurUmbracoValidationAttributesAssets" BeforeTargets="Clean">
+        <ItemGroup>
+            <OurUmbracoValidationAttributesDir Include="$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.ValidationAttributes\" />
+        </ItemGroup>
+        <Message Text="Clear old Our.Umbraco.ValidationAttributes data"  Importance="high" />
+        <RemoveDir Directories="@(OurUmbracoValidationAttributesDir)"  />
+    </Target>
+
+</Project>

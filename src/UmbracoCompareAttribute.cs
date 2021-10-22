@@ -1,11 +1,11 @@
-using Our.Umbraco.DataAnnotations.Helpers;
-using Our.Umbraco.DataAnnotations.Interfaces;
-using Our.Umbraco.DataAnnotations.Services;
+using Our.Umbraco.ValidationAttributes.Helpers;
+using Our.Umbraco.ValidationAttributes.Interfaces;
+using Our.Umbraco.ValidationAttributes.Services;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Our.Umbraco.DataAnnotations
+namespace Our.Umbraco.ValidationAttributes
 {
     /// <summary>
     /// Specified that two properties data field value must match.
@@ -21,7 +21,7 @@ namespace Our.Umbraco.DataAnnotations
 
         public void AddValidation(ClientModelValidationContext context)
         {
-            ErrorMessageString = DataAnnotationsService.DictionaryValue(DictionaryKey);
+            ErrorMessageString = ValidationAttributesService.DictionaryValue(DictionaryKey);
 
             if (context.ModelMetadata.ContainerType != null)
             {

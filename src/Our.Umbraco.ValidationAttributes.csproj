@@ -2,13 +2,14 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <ContentTargetFolders>.</ContentTargetFolders>
-        <Product>Our.Umbraco.DataAnnotations</Product>
-        <PackageId>Our.Umbraco.DataAnnotations</PackageId>
-        <Title>Our.Umbraco.DataAnnotations</Title>
-        <Description>...</Description>
-        <Product>...</Product>
+        <Product>Our.Umbraco.ValidationAttributes</Product>
+        <PackageId>Our.Umbraco.ValidationAttributes</PackageId>
+        <Title>Umbraco.ValidationAttributes</Title>
+        <Description>[Umbraco v9] Contains validation attributes to decorate your classes, but using Umbraco Dictionary as the resource.</Description>
         <PackageTags>umbraco plugin package</PackageTags>
-        <RootNamespace>Our.Umbraco.DataAnnotations</RootNamespace>
+        <Version>1.0.0</Version>
+        <Authors>ZioTino</Authors>
+        <RootNamespace>Our.Umbraco.ValidationAttributes</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="App_Plugins\Our.Umbraco.DataAnnotations\**\*.*">
+        <Content Include="App_Plugins\Our.Umbraco.ValidationAttributes\**\*.*">
             <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
             <CopyToPublishDirectory>Always</CopyToPublishDirectory>
         </Content>

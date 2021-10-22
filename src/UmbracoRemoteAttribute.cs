@@ -1,12 +1,12 @@
-using Our.Umbraco.DataAnnotations.Helpers;
-using Our.Umbraco.DataAnnotations.Interfaces;
-using Our.Umbraco.DataAnnotations.Services;
+using Our.Umbraco.ValidationAttributes.Helpers;
+using Our.Umbraco.ValidationAttributes.Interfaces;
+using Our.Umbraco.ValidationAttributes.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.Extensions.Configuration;
 using Umbraco.Cms.Web.Common;
 
-namespace Our.Umbraco.DataAnnotations
+namespace Our.Umbraco.ValidationAttributes
 {
     /// <summary>
     /// A RemoteAttributeBase for controllers which configures Unobtrusive validation to send an Ajax request to the web site. The invoked action should return JSON indicating whether the value is valid.
@@ -25,7 +25,7 @@ namespace Our.Umbraco.DataAnnotations
 
         public override void AddValidation(ClientModelValidationContext context)
         {
-            ErrorMessage = DataAnnotationsService.DictionaryValue(DictionaryKey);
+            ErrorMessage = ValidationAttributesService.DictionaryValue(DictionaryKey);
             base.AddValidation(context);
         }
     }

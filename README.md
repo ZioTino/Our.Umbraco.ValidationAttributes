@@ -1,4 +1,4 @@
-# Our.Umbraco.DataAnotations
+# Our.Umbraco.ValidationAttributes
 Contains model validation attributes to for your properties, by using umbraco dictionary as the resource for error messages.
 
 This branch is exclusively for Umbraco 9.
@@ -7,14 +7,14 @@ This project is a port for Umbraco 9, taken from the [original Our.Umbraco.DataA
 [Looking for Umbraco 8?](https://github.com/rasmuseeg/Our.Umbraco.DataAnnotations/tree/dev-v8)  
 [Looking for Umbraco 7?](https://github.com/rasmuseeg/Our.Umbraco.DataAnnotations/tree/dev-v7)
 
-## Installation
+<!-- ## Installation
 
 NuGet:
 ```
-PM > Install-Package Our.Umbraco.DataAnnotations
+PM > Install-Package Our.Umbraco.ValidationAttributes
 ```
 
-Build the project and start website.
+Build the project and start website. -->
 
 ## Client Validation
 Include the following scripts in your layout.cshtml file, or in your master page:
@@ -27,7 +27,7 @@ Include the following scripts in your layout.cshtml file, or in your master page
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" referrerpolicy="no-referrer"></script>
 
-    <script src="~\App_Plugins\Our.Umbraco.DataAnnotations\Scripts\jquery.validation.custom.js">
+    <script src="~\App_Plugins\Our.Umbraco.ValidationAttributes\Scripts\jquery.validation.custom.js">
 </body>
 ```
 

@@ -1,12 +1,12 @@
+using Our.Umbraco.ValidationAttributes.Helpers;
+using Our.Umbraco.ValidationAttributes.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Our.Umbraco.DataAnnotations.Helpers;
-using Our.Umbraco.DataAnnotations.Interfaces;
 
-namespace Our.Umbraco.DataAnnotations.Conditionals
+namespace Our.Umbraco.ValidationAttributes.Conditionals
 {
     /// <summary>
     /// Abstract class to implement custom conditional validation, with support to Umbraco Dictionary items.
