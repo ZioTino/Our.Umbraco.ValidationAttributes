@@ -7,7 +7,7 @@
         <Title>Umbraco.ValidationAttributes</Title>
         <Description>[Umbraco v9] Contains validation attributes to decorate your classes, but using Umbraco Dictionary as the resource.</Description>
         <PackageTags>umbraco plugin package</PackageTags>
-        <Version>1.0.2</Version>
+        <Version>1.1.0</Version>
         <Authors>ZioTino</Authors>
         <RootNamespace>Our.Umbraco.ValidationAttributes</RootNamespace>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
@@ -24,7 +24,7 @@
 
     <ItemGroup>
         <None Include="..\LICENSE.md" Pack="true" PackagePath=""/>
-        <None Include="..\README.md" Pack="true" PackagePath=""/>
+        <None Include="..\docs\README.md" Pack="true" PackagePath=""/>
         <None Include="..\assets\icon.png" Pack="true" PackagePath="\"/>
     </ItemGroup>
 

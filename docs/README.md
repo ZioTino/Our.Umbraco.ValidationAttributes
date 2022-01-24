@@ -29,7 +29,7 @@ Include the following scripts in your layout.cshtml file, or in your master page
 ```
 
 The above is just a sample, you may use any method you like to include the scripts.  
-**NOTE: *jquery.validation.custom.js* is required to ensure that the UmbracoMustBeTrue attribute is working.**  
+**NOTE: *jquery.validation.custom.js* is required to ensure that UmbracoIFormFileExtensions, UmbracoMaxFileSize and UmbracoMustBeTrue attributes are working correctly.**  
 **As an alternative you can include yourself its content with any method you like.**  
 
 The end result for a page with validation could look like:
@@ -70,6 +70,8 @@ Decorate your properties with the following attributes
  * UmbracoCompare
  * UmbracoDisplayName
  * UmbracoEmailAddress
+ * UmbracoIFormFileExtensions
+ * UmbracoMaxFileSize
  * UmbracoMaxLength
  * UmbracoMinLength
  * UmbracoMustBeTrue
@@ -85,7 +87,7 @@ Decorate your properties with the following attributes
 public string MyProperty { get; set; } 
 ```
 
-### UmbracoCompareAttribute
+### UmbracoCompare
 
 | Umbraco Dictionary Key | Default |
 | -- | -- |
@@ -109,7 +111,7 @@ public string ConfirmPassword { get; set; }
 
 | Key | Default |
 | -- | -- |
-| Provied key | Must be created by your self. |
+| Provied key | Must be created by yourself. |
 
 Example:
 ```C#
@@ -122,7 +124,7 @@ public string Username { get; set; }
 
 | Key | Default |
 | -- | -- |
-| EmailError | Must be created by your self. |
+| EmailError | Must be created by yourself. |
 
 Example:
 ```C#
@@ -130,11 +132,35 @@ Example:
 public string Email { get; set; }
 ```
 
+### UmbracoIFormFileExtensions  
+  
+| Key | Default |
+| -- | -- |
+| FormFileExtensionsError | Must be created by yourself. |  
+  
+Example:   
+```C#
+[UmbracoIFormFileExtensions("jpeg,png,jpg")] // List of comma-separated file extensions
+public IFormFile UmbracoIFormFileExtensions { get; set; }
+```   
+
+### UmbracoMaxFileSize  
+  
+| Key | Default |
+| -- | -- |
+| MaxFileSizeError | Must be created by yourself. |  
+
+Example:  
+```C#
+[UmbracoMaxFileSize(5 * 1024 * 1024)] // Max size in bytes
+public IFormFile UmbracoMaxFileSize { get; set; }
+```
+
 ### UmbracoMinLength
 
 | Key | Default |
 | -- | -- |
-| MinLengthError | Must be created by your self. |
+| MinLengthError | Must be created by yourself. |
 
 Example:
 ```C#
@@ -146,7 +172,7 @@ public string MyProperty { get; set; }
 
 | Key | Default |
 | -- | -- |
-| MaxLengthError | Must be created by your self. |
+| MaxLengthError | Must be created by yourself. |
 
 Example:
 ```C#
@@ -158,7 +184,7 @@ public string MyProperty { get; set; }
 
 | Key | Default
 | -- | -- |
-| MinMaxLengthError | Must be created by your self. |
+| MinMaxLengthError | Must be created by yourself. |
 
 Examples:
 ```C#
@@ -172,7 +198,7 @@ public string Message { get; set; }
 ### UmbracoMustBeTrue
 | Key | Default |
 | -- | -- |
-| MustBeTrueError | Must be created by your self. |
+| MustBeTrueError | Must be created by yourself. |
 
 Example:
 ```C#
@@ -199,11 +225,11 @@ public string MyProperty { get; set; }
 ```
 
 ## Custom dictionary keys
-Each Attribute, has a public property `DictionaryKey` which can be set like this:
+Each Attribute has a public property `DictionaryKey` which can be set like this:
 ```C#
 [UmbracoRequired(DictionaryKey = "MyCustomKey")]
 public string MyProperty { get; set; }
 ```
 
 Not setting a custom key, will fallback to the default dictionary key.  
-**You have to create Dictionary Keys manually, taking example from this documentation.**
+**You have to create Dictionary Keys manually, as explained in this documentation.**
