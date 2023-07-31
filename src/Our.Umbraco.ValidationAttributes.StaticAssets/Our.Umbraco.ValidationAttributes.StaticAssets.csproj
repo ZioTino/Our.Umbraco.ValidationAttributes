@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+    <PropertyGroup>
+        <Product>Our.Umbraco.ValidationAttributes.StaticAssets</Product>
+        <PackageId>Our.Umbraco.ValidationAttributes.StaticAssets</PackageId>
+        <Title>Our.Umbraco.ValidationAttributes.StaticAssets</Title>
+        <Description>[Umbraco v9] Contains validation attributes to decorate your classes, but using Umbraco Dictionary as the resource.</Description>
+        <PackageTags>umbraco plugin package</PackageTags>
+        <StaticWebAssetBasePath>App_Plugins</StaticWebAssetBasePath>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>      
+        <RootNamespace>Our.Umbraco.ValidationAttributes.StaticAssets</RootNamespace>
+
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Umbraco.Cms.Core" Version="10.6.1" />
+    </ItemGroup>
+
+
+</Project>

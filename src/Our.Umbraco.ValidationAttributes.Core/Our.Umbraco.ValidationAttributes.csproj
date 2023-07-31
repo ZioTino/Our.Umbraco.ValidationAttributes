@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Product>Our.Umbraco.ValidationAttributes</Product>
+        <PackageId>Our.Umbraco.ValidationAttributes</PackageId>
+        <Title>Umbraco.ValidationAttributes</Title>
+        <Description>[Umbraco v9] Contains validation attributes to decorate your classes, but using Umbraco Dictionary as the resource.</Description>
+        <RootNamespace>Our.Umbraco.ValidationAttributes</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.6.1" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.6.1" />
+    </ItemGroup>
+
+
+</Project>

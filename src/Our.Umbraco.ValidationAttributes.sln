@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.ValidationAttributes", "Our.Umbraco.ValidationAttributes.Core\Our.Umbraco.ValidationAttributes.csproj", "{3285A602-6540-44A8-AB6D-743B89F1BD40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{EA678F62-05A8-4FFC-841A-D5FC59365513}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE.md = ..\LICENSE.md
+		..\assets\icon.png = ..\assets\icon.png
+		..\docs\README.md = ..\docs\README.md
+		..\docs\_config.yml = ..\docs\_config.yml
+		..\Directory.Build.props = ..\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.ValidationAttributes.StaticAssets", "Our.Umbraco.ValidationAttributes.StaticAssets\Our.Umbraco.ValidationAttributes.StaticAssets.csproj", "{A4E32C0B-C878-4A6F-BF96-D99E8A025091}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3285A602-6540-44A8-AB6D-743B89F1BD40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3285A602-6540-44A8-AB6D-743B89F1BD40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3285A602-6540-44A8-AB6D-743B89F1BD40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3285A602-6540-44A8-AB6D-743B89F1BD40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E32C0B-C878-4A6F-BF96-D99E8A025091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E32C0B-C878-4A6F-BF96-D99E8A025091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E32C0B-C878-4A6F-BF96-D99E8A025091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E32C0B-C878-4A6F-BF96-D99E8A025091}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

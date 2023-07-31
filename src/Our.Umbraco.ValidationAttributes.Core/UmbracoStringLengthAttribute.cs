@@ -15,6 +15,11 @@ namespace Our.Umbraco.ValidationAttributes
 
         public UmbracoStringLengthAttribute(int maximumLength) : base(maximumLength) {}
 
+        public UmbracoStringLengthAttribute(string dictionaryKey, int maximumLength) : base(maximumLength)
+        {
+            DictionaryKey = dictionaryKey;
+        }
+
         public void AddValidation(ClientModelValidationContext context)
         {
             ErrorMessage = ValidationAttributesService.DictionaryValue(DictionaryKey);
