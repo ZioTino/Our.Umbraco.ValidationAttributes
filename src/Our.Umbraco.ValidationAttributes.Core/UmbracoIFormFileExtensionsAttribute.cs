@@ -38,7 +38,7 @@ namespace Our.Umbraco.ValidationAttributes
             AttributeHelper.MergeAttribute(context.Attributes, "data-val-filetypes-types", string.Join(',', ValidFileTypes));
 
             // input type="file" accept attribute 
-            List<string> validExtensions = new List<string>();
+            System.Collections.Generic.List<string> validExtensions = new System.Collections.Generic.List<string>();
             foreach (string type in ValidFileTypes)
             {
                 validExtensions.Add($".{type}");
