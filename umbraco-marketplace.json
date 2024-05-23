@@ -1,0 +1,7 @@
+{
+    "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+    "IssueTrackerUrl": "https://github.com/ZioTino/Our.Umbraco.ValidationAttributes/issues",
+    "ProjectUrl": "https://ziotino.github.io/Our.Umbraco.ValidationAttributes"
+    "LicenseTypes": [ "Free" ],
+    "Category": "Developer Tools"
+}

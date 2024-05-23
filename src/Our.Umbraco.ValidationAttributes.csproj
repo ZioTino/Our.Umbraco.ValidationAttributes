@@ -5,8 +5,8 @@
         <Product>Our.Umbraco.ValidationAttributes</Product>
         <PackageId>Our.Umbraco.ValidationAttributes</PackageId>
         <Title>Umbraco.ValidationAttributes</Title>
-        <Description>[Umbraco v9] Contains validation attributes to decorate your classes, but using Umbraco Dictionary as the resource.</Description>
-        <PackageTags>umbraco plugin package</PackageTags>
+        <Description>[Umbraco v9+] Contains validation attributes to decorate your classes, but using Umbraco Dictionary as the resource.</Description>
+        <PackageTags>umbraco-marketplace umbraco plugin package</PackageTags>
         <Version>1.1.0</Version>
         <Authors>ZioTino</Authors>
         <RootNamespace>Our.Umbraco.ValidationAttributes</RootNamespace>
