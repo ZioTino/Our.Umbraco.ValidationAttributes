@@ -1,10 +1,10 @@
-using Our.Umbraco.ValidationAttributes.Helpers;
-using Our.Umbraco.ValidationAttributes.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Our.Umbraco.ValidationAttributes.Helpers;
+using Our.Umbraco.ValidationAttributes.Interfaces;
 
 namespace Our.Umbraco.ValidationAttributes.Conditionals
 {

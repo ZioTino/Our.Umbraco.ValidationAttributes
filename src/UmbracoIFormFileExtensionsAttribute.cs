@@ -1,8 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using J2N.Collections.Generic;
-using Lucene.Net.Analysis.Hunspell;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Our.Umbraco.ValidationAttributes.Helpers;
@@ -14,7 +13,7 @@ namespace Our.Umbraco.ValidationAttributes
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public sealed class UmbracoIFormFileExtensionsAttribute : ValidationAttribute, IClientModelValidator, IUmbracoValidationAttribute
     {
-        public string DictionaryKey {get; set;} = "FormFileExtensionsError";
+        public string DictionaryKey { get; set; } = "FormFileExtensionsError";
 
         public string[] ValidFileTypes { get; set; }
 
@@ -50,7 +49,7 @@ namespace Our.Umbraco.ValidationAttributes
         {
             IFormFile file = value as IFormFile;
             bool isValid = true;
-            
+
             if (file != null)
             {
                 isValid = ValidFileTypes.Any(x => file.FileName.EndsWith(x));
