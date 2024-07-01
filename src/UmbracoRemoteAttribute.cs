@@ -1,10 +1,7 @@
-using Our.Umbraco.ValidationAttributes.Helpers;
-using Our.Umbraco.ValidationAttributes.Interfaces;
-using Our.Umbraco.ValidationAttributes.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using Microsoft.Extensions.Configuration;
-using Umbraco.Cms.Web.Common;
+using Our.Umbraco.ValidationAttributes.Interfaces;
+using Our.Umbraco.ValidationAttributes.Services;
 
 namespace Our.Umbraco.ValidationAttributes
 {
@@ -19,9 +16,9 @@ namespace Our.Umbraco.ValidationAttributes
     {
         public string DictionaryKey { get; set; }
 
-        public UmbracoRemoteAttribute(string routeName) : base(routeName) {}
-        public UmbracoRemoteAttribute(string action, string controller) : base(action, controller) {}
-        public UmbracoRemoteAttribute(string action, string controller, string areaName) : base(action, controller, areaName) {}
+        public UmbracoRemoteAttribute(string routeName) : base(routeName) { }
+        public UmbracoRemoteAttribute(string action, string controller) : base(action, controller) { }
+        public UmbracoRemoteAttribute(string action, string controller, string areaName) : base(action, controller, areaName) { }
 
         public override void AddValidation(ClientModelValidationContext context)
         {
