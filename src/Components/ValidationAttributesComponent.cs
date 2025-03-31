@@ -1,8 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Our.Umbraco.ValidationAttributes.Services;
 using Umbraco.Cms.Core.Composing;
-using Umbraco.Cms.Core.Dictionary;
-using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Web.Common;
 
 namespace Our.Umbraco.ValidationAttributes.Components
@@ -22,6 +20,6 @@ namespace Our.Umbraco.ValidationAttributes.Components
         }
 
         public void Initialize() => ValidationAttributesService.Start(_umbracoHelperAccessor, _configuration);
-        public void Terminate() {}
+        public void Terminate() { }
     }
 }
